@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", sans-serif;
+  
+  --color-brand-blue: #FF5C00;
+  --color-surface: #1A1A1A;
+  --color-matte-black: #0F0F0F;
+}
+
+@layer base {
+  body {
+    @apply bg-matte-black text-white font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold uppercase tracking-tight;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0F0F0F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1A1A1A;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF5C00;
+}
+
+/* Glassmorphism utility */
+.glass {
+  @apply bg-white/5 backdrop-blur-lg border border-white/10;
+}
