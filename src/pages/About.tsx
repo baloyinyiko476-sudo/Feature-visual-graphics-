@@ -29,8 +29,9 @@ export default function About() {
           <AnimatedSection direction="left" className="relative">
             <div className="aspect-[4/5] rounded-[40px] overflow-hidden border border-white/10 shadow-2xl relative">
               <img 
-                src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=800" 
-                alt="The Designer" 
+                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=800" 
+                alt="Nyiko MJ" 
+                referrerPolicy="no-referrer"
                 className="w-full h-full object-cover grayscale brightness-75 hover:grayscale-0 hover:brightness-100 transition-all duration-700" 
               />
               <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-matte-black via-matte-black/40 to-transparent">
@@ -94,6 +95,7 @@ export default function About() {
           <img 
             src="https://images.unsplash.com/photo-1497215841178-01289196b02a?auto=format&fit=crop&q=80&w=1600" 
             alt="Workspace" 
+            referrerPolicy="no-referrer"
             className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
           />
           <div className="absolute inset-0 bg-matte-black/40 flex items-center justify-center">

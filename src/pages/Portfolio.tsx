@@ -4,17 +4,19 @@ import { MousePointer2, Plus, X } from 'lucide-react';
 import { AnimatedSection } from '@/src/components/AnimatedSection';
 import { cn } from '@/src/lib/utils';
 
-const categories = ['All', 'Logos', 'Branding', 'Social Media', 'Music'];
+const categories = ['All', 'Logos', 'Branding', 'Social Media', 'Music', 'Templates'];
 
 const projects = [
-  { id: 1, title: 'Techno Pulse', cat: 'Music', img: 'https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?auto=format&fit=crop&q=80&w=800', desc: 'Futuristic album cover design for electronic music artist Pulse, focusing on high-contrast neon elements.' },
-  { id: 2, title: 'Vanguard Realty', cat: 'Branding', img: 'https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&q=80&w=800', desc: 'Minimalist luxury branding for a high-end real estate agency in Los Angeles.' },
-  { id: 3, title: 'Streamflow App', cat: 'Social Media', img: 'https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&fit=crop&q=80&w=800', desc: 'Modern social media campaign for a productivity software launch.' },
-  { id: 4, title: 'Nocturnal Goods', cat: 'Branding', img: 'https://images.unsplash.com/photo-1554629947-334ff61d85dc?auto=format&fit=crop&q=80&w=800', desc: 'Dark-themed identity for a boutique lifestyle brand focusing on minimalist aesthetics.' },
-  { id: 5, title: 'Lumiere Studios', cat: 'Logos', img: 'https://images.unsplash.com/photo-1572044162444-ad60f128bde2?auto=format&fit=crop&q=80&w=800', desc: 'Versatile logo design for a film production house specializing in independent storytelling.' },
-  { id: 6, title: 'Urban Rhythm', cat: 'Music', img: 'https://images.unsplash.com/photo-1514525253344-f81ced00c021?auto=format&fit=crop&q=80&w=800', desc: 'Vibrant cover art for an urban hip-hop project, blending street art vibes with clean typography.' },
-  { id: 7, title: 'HealthSync', cat: 'Logos', img: 'https://images.unsplash.com/photo-1620336655055-088d06e36bf0?auto=format&fit=crop&q=80&w=800', desc: 'Medical-tech logo emphasizing trust, connection, and modern wellness.' },
-  { id: 8, title: 'Coffee & Code', cat: 'Social Media', img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800', desc: 'Community building graphics for a developer-focused cafe experience.' },
+  { id: 1, title: 'Hustle Ya Kasi', cat: 'Music', img: 'https://images.unsplash.com/photo-1635336064045-142ee2600644?auto=format&fit=crop&q=80&w=800', desc: 'A vibrant EP cover for Nyiko MJ, featuring futuristic 3D floral elements and bold typography.' },
+  { id: 2, title: 'Fefi EP Session', cat: 'Templates', img: 'https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&q=80&w=800', desc: '[VIEW ONLY] Event poster template showcasing modern layout techniques for music sessions and live events.' },
+  { id: 3, title: 'Ke Zamile (Angel)', cat: 'Music', img: 'https://images.unsplash.com/photo-1590059009591-62056faec381?auto=format&fit=crop&q=80&w=800', desc: 'Album art featuring classical sculpture themes blended with contemporary music aesthetics.' },
+  { id: 4, title: 'Ke Zamile (Faces)', cat: 'Music', img: 'https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&q=80&w=800', desc: 'Collaborative EP cover art showcasing artists with high-contrast red and black themes.' },
+  { id: 5, title: 'A Re Bineng', cat: 'Music', img: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=800', desc: 'EP cover design highlighting artist collaborations with premium photographic compositions.' },
+  { id: 6, title: 'Collaboration Flyer', cat: 'Templates', img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800', desc: '[VIEW ONLY] Artist collaboration promotional material designed for maximum social media impact.' },
+  { id: 7, title: 'DJ Star Booking', cat: 'Templates', img: 'https://images.unsplash.com/photo-1574672280600-4accfa5b6f98?auto=format&fit=crop&q=80&w=800', desc: '[VIEW ONLY] Professional booking flyer for DJ Star, demonstrating layout hierarchy for bookings and enquiries.' },
+  { id: 8, title: 'My One and Only V1', cat: 'Music', img: 'https://images.unsplash.com/photo-1518131394553-c35198fd47bb?auto=format&fit=crop&q=80&w=800', desc: 'Emotive EP cover art for Fefi Mafezana, focusing on visual storytelling and warmth.' },
+  { id: 9, title: 'My One and Only V2', cat: 'Music', img: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800', desc: 'Alternative layout for "My One and Only", exploring different typographic hierarchies.' },
+  { id: 10, title: 'Bofile Tekkie', cat: 'Music', img: 'https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?auto=format&fit=crop&q=80&w=800', desc: 'High-energy single cover with sunset vibes and streetwear-inspired photography.' },
 ];
 
 export default function Portfolio() {
@@ -74,6 +76,7 @@ export default function Portfolio() {
                   <img 
                     src={project.img} 
                     alt={project.title} 
+                    referrerPolicy="no-referrer"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                   />
                   <div className="absolute inset-0 bg-matte-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-sm flex flex-col items-center justify-center p-8 text-center">
@@ -117,7 +120,7 @@ export default function Portfolio() {
             >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="relative aspect-square rounded-[40px] overflow-hidden shadow-2xl">
-                  <img src={selectedProject.img} alt={selectedProject.title} className="w-full h-full object-cover" />
+                  <img src={selectedProject.img} alt={selectedProject.title} referrerPolicy="no-referrer" className="w-full h-full object-cover" />
                 </div>
                 <div className="space-y-8">
                   <div>

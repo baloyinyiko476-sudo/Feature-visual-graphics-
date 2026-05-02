@@ -53,7 +53,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-xs font-bold uppercase tracking-widest text-white/40">Message Me</p>
-                      <p className="text-lg font-bold">061 458 8389</p>
+                      <p className="text-lg font-bold">071 843 0934</p>
                     </div>
                   </div>
                 </div>
@@ -119,10 +119,10 @@ export default function Contact() {
                           <div className="space-y-3">
                             <label className="text-xs font-bold uppercase tracking-widest text-white/40 ml-1">Budget Range</label>
                             <select className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-brand-blue outline-none transition-colors text-white appearance-none cursor-pointer">
-                               <option className="bg-matte-black">$150 - $400</option>
-                               <option className="bg-matte-black">$400 - $1,000</option>
-                               <option className="bg-matte-black">$1,000 - $3,000</option>
-                               <option className="bg-matte-black">$3,000+</option>
+                               <option className="bg-matte-black">R100 - R500</option>
+                               <option className="bg-matte-black">R500 - R1,500</option>
+                               <option className="bg-matte-black">R1,500 - R3,500</option>
+                               <option className="bg-matte-black">R3,500+</option>
                             </select>
                           </div>
                        </div>
@@ -147,7 +147,7 @@ export default function Contact() {
                             <Send size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                           </button>
                           <a 
-                            href="https://wa.me/27614588389"
+                            href="https://wa.me/27718430934"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-white/5 hover:bg-white/10 border border-white/10 px-10 py-5 rounded-full font-bold text-lg flex items-center justify-center gap-3 transition-all"

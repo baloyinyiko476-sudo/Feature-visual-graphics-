@@ -57,8 +57,9 @@ export default function Home() {
             <div className="relative aspect-square w-full max-w-[600px] mx-auto">
               <div className="absolute inset-0 bg-gradient-to-tr from-brand-blue/20 to-transparent rounded-3xl -rotate-6 scale-95" />
               <img
-                src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=1000"
+                src="https://images.unsplash.com/photo-1635336064045-142ee2600644?auto=format&fit=crop&q=80&w=1000"
                 alt="Premium Design Mockup"
+                referrerPolicy="no-referrer"
                 className="rounded-3xl shadow-2xl relative z-10 w-full h-full object-cover border border-white/10"
               />
               {/* Floating elements */}
@@ -126,7 +127,7 @@ export default function Home() {
                 className="group relative h-[450px] rounded-3xl overflow-hidden border border-white/5"
               >
                 <div className="absolute inset-0 z-0">
-                  <img src={service.img} alt={service.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <img src={service.img} alt={service.title} referrerPolicy="no-referrer" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-matte-black via-matte-black/60 to-transparent" />
                 </div>
                 <div className="relative z-10 h-full p-8 flex flex-col justify-end">
@@ -165,17 +166,17 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { title: 'Techno Pulse', cat: 'Album Cover', img: 'https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?auto=format&fit=crop&q=80&w=800' },
-              { title: 'Vanguard Realty', cat: 'Branding', img: 'https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&q=80&w=800' },
-              { title: 'Streamflow App', cat: 'Icon Design', img: 'https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&fit=crop&q=80&w=800' },
-              { title: 'Nocturnal Goods', cat: 'Packaging', img: 'https://images.unsplash.com/photo-1554629947-334ff61d85dc?auto=format&fit=crop&q=80&w=800' },
+              { title: 'Hustle Ya Kasi', cat: 'Music Cover', img: 'https://images.unsplash.com/photo-1635336064045-142ee2600644?auto=format&fit=crop&q=80&w=800' },
+              { title: 'A Re Bineng', cat: 'EP Design', img: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=800' },
+              { title: 'Ke Zamile', cat: 'Music Art', img: 'https://images.unsplash.com/photo-1590059009591-62056faec381?auto=format&fit=crop&q=80&w=800' },
+              { title: 'DJ Star Booking', cat: 'Flyer Template', img: 'https://images.unsplash.com/photo-1574672280600-4accfa5b6f98?auto=format&fit=crop&q=80&w=800' },
             ].map((project, i) => (
               <AnimatedSection 
                 key={project.title} 
                 delay={i * 0.15}
                 className="group relative aspect-[4/3] rounded-3xl overflow-hidden cursor-pointer"
               >
-                <img src={project.img} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src={project.img} alt={project.title} referrerPolicy="no-referrer" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-matte-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center">
                    <div className="p-8 text-center translate-y-10 group-hover:translate-y-0 transition-transform duration-500">
                       <p className="text-brand-blue font-bold tracking-widest uppercase text-xs mb-2 italic">{project.cat}</p>
@@ -224,6 +225,7 @@ export default function Home() {
                 <div className="relative glass p-10 rounded-[40px] border-white/5 shadow-2xl overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=800" 
+                    referrerPolicy="no-referrer"
                     className="w-full rounded-2xl shadow-xl grayscale hover:grayscale-0 transition-all duration-700" 
                     alt="Creative Workspace"
                   />
@@ -284,7 +286,7 @@ export default function Home() {
                 </div>
                 <p className="text-white/80 italic text-lg leading-relaxed mb-10 relative z-10">"{testimonial.quote}"</p>
                 <div className="flex items-center gap-4">
-                  <img src={testimonial.img} alt={testimonial.name} className="w-12 h-12 rounded-full border border-brand-blue" />
+                  <img src={testimonial.img} alt={testimonial.name} referrerPolicy="no-referrer" className="w-12 h-12 rounded-full border border-brand-blue" />
                   <div>
                     <h4 className="font-bold">{testimonial.name}</h4>
                     <p className="text-xs text-white/40">{testimonial.role}</p>

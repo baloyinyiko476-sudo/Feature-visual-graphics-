@@ -17,25 +17,25 @@ import { cn } from '@/src/lib/utils';
 
 const pricingPackages = [
   {
-    name: 'Basic',
-    price: '150',
-    desc: 'Perfect for startups needing a quick, professional visual anchor.',
-    features: ['1 Primary Logo', '2 Design Revisions', '3 Days Delivery', 'Vector Source Files'],
+    name: 'Essential',
+    price: '80',
+    desc: 'Perfect for quick, professional visual assets like single flyers or social posts.',
+    features: ['1 Custom Graphic', '2 Design Revisions', '24h Delivery', 'High-Res Exports'],
     color: 'bg-white/5',
   },
   {
-    name: 'Standard',
-    price: '350',
+    name: 'Strategic',
+    price: '250',
     popular: true,
-    desc: 'The best value for growing creators needing a cohesive social presence.',
-    features: ['Standard Logo Kit', 'Social Media Pack (5 Posts)', '5 Design Revisions', '5 Days Delivery', 'Style Guide Sheet'],
+    desc: 'Comprehensive visual identity for growing brands and artists.',
+    features: ['Full Logo Kit', 'Social Media Branding (3 Posts)', '3 Design Revisions', '3 Days Delivery', 'Style Guidelines'],
     color: 'bg-brand-blue',
   },
   {
-    name: 'Premium',
-    price: '700+',
-    desc: 'Complete agency-level branding system for established businesses.',
-    features: ['Full Branding Kit', 'Unlimited Revisions', '10 Days Delivery', 'Social Media Strategy', 'Priority Support'],
+    name: 'Elite',
+    price: '600+',
+    desc: 'Full-scale branding and strategic design system for maximum impact.',
+    features: ['Premium Branding System', 'Unlimited Revisions', 'Priority Queue', 'Social Media Strategy', 'Full Source Files'],
     color: 'bg-white/5',
   },
 ];
@@ -50,7 +50,7 @@ export default function Services() {
             <p className="text-brand-blue font-bold tracking-[.3em] uppercase text-xs mb-4">Strategic Design</p>
             <h1 className="text-5xl md:text-8xl font-display font-bold mb-8">Service Packages</h1>
             <p className="text-white/60 max-w-3xl mx-auto text-xl leading-relaxed">
-              Transparent pricing. No hidden fees. Just premium design results tailored to your specific needs and goals.
+              Transparent starting rates. Final investment will depend on your specific project complexity and scope.
             </p>
           </AnimatedSection>
         </div>
@@ -62,23 +62,23 @@ export default function Services() {
           {[
             {
               title: 'Branding Kit',
-              price: '$499',
+              price: 'R250',
               icon: Palette,
-              features: ['Primary & Secondary Logo', 'Complete Color Palette', 'Typography System', 'Comprehensive Brand Guidelines'],
+              features: ['Primary & Secondary Logo', 'Complete Color Palette', 'Typography System', 'Brand Guidelines'],
               img: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=800',
               reverse: false
             },
             {
               title: 'Social Media Pack',
-              price: '$199',
+              price: 'R150',
               icon: Smartphone,
-              features: ['5 Custom Content Posts', '2 Dynamic Story Templates', 'Platform Banner Design', 'Optimized for High Engagement'],
+              features: ['5 Custom Content Posts', '2 Dynamic Story Templates', 'Platform Banner Design', 'High Engagement Layouts'],
               img: 'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&q=80&w=800',
               reverse: true
             },
             {
               title: 'Cover Art Design',
-              price: '$120',
+              price: 'R80',
               icon: Music,
               features: ['Album / Single Cover Art', 'Streaming Platform Formatting', 'Print-Ready CD Artwork', 'Social Media Promo Header'],
               img: 'https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?auto=format&fit=crop&q=80&w=800',
@@ -117,7 +117,7 @@ export default function Services() {
                 </Link>
               </div>
               <div className={`relative aspect-[4/3] rounded-[40px] overflow-hidden border border-white/5 shadow-2xl ${service.reverse ? 'lg:order-1' : ''}`}>
-                <img src={service.img} alt={service.title} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105" />
+                <img src={service.img} alt={service.title} referrerPolicy="no-referrer" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-tr from-brand-blue/10 to-transparent" />
               </div>
             </AnimatedSection>
@@ -130,7 +130,10 @@ export default function Services() {
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="text-center mb-20">
             <h2 className="text-4xl md:text-7xl font-display font-bold mb-6">Choose Your Package</h2>
-            <p className="text-white/60 text-lg max-w-2xl mx-auto italic">Scale your project based on your current needs.</p>
+            <p className="text-white/60 text-lg max-w-2xl mx-auto italic mb-4">Scale your project based on your current needs.</p>
+            <div className="inline-block bg-brand-blue/10 border border-brand-blue/20 rounded-full px-6 py-2">
+              <p className="text-brand-blue text-sm font-bold uppercase tracking-widest">Final price varies based on custom requirements</p>
+            </div>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -152,8 +155,8 @@ export default function Services() {
                 <div className="mb-10">
                   <h3 className="text-2xl font-display font-bold mb-2">{pkg.name}</h3>
                   <div className="flex items-baseline gap-1 mb-6">
-                    <span className="text-5xl font-display font-bold">${pkg.price}</span>
-                    {pkg.name !== 'Premium' && <span className="text-white/40 text-sm">/flat fee</span>}
+                    <span className="text-5xl font-display font-bold">R{pkg.price}</span>
+                    {pkg.name !== 'Elite' && <span className="text-white/40 text-sm">/starting</span>}
                   </div>
                   <p className="text-white/60 text-sm leading-relaxed min-h-[48px]">{pkg.desc}</p>
                 </div>
